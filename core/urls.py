@@ -5,7 +5,8 @@ urlpatterns = [
     path("register/", register, name="register"),
     path("login/", user_login, name="login"),
     path("logout/", user_logout, name="logout"),
-    path("", home, name="home"),
+    path("", user_login, name="login"),
+    path("home",home,name='home'),
     path("create_post/", create_post, name="create_post"),
     path('delete_post/<int:post_id>/', delete_post, name='delete_post'),
 ]
