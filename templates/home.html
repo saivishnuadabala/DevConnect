@@ -24,7 +24,7 @@
         <!-- Post Creation Form -->
         <div class="bg-white p-4 shadow-md rounded-lg">
             <h2 class="text-lg font-bold">Create a Post</h2>
-            <form method="POST" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data" action="{% url 'create_post' %}">
                 {% csrf_token %}
                 <textarea name="content" placeholder="What's on your mind?" required class="w-full p-2 border rounded-lg mt-2"></textarea>
                 <input type="file" name="image" class="mt-2">

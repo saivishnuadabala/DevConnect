@@ -15,6 +15,7 @@ def home(request):
 # Create Post
 @login_required
 def create_post(request):
+    print('yesss')
     if request.method == "POST":
         content = request.POST["content"]
         image = request.FILES.get("image")  # Image upload
